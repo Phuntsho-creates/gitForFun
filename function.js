@@ -22,3 +22,12 @@ function stringLengthEven(str){
 }
 console.log(stringLengthEven("hello"));
 console.log(stringLengthEven("hell"));
+
+function doubleChar(str) {
+let result ='';
+for(let i = 0; i < str.length; i += 1){
+    result +=str[i] + str[i];
+}
+return result
+}
+console.log(doubleChar('phuntsho wangmo'));
