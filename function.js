@@ -31,3 +31,5 @@ for(let i = 0; i < str.length; i += 1){
 return result
 }
 console.log(doubleChar('phuntsho wangmo'));
+
+// this is a try 
