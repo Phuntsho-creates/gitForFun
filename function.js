@@ -16,3 +16,9 @@ function replace(str,charToReplace,charReplacement){
 
 }
 console.log(replace("hello","l","maybe123"));
+
+function stringLengthEven(str){
+   return str.length %2===0;
+}
+console.log(stringLengthEven("hello"));
+console.log(stringLengthEven("hell"));
