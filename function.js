@@ -41,3 +41,28 @@ function arrayPlusArray(arr1, arr2) {
   return sum; 
 }
 console.log(arrayPlusArray([1, 2, 3], [4, 5, 6]));
+
+//Write a function that takes an array of words and smashes them together into a sentence and returns the sentence. 
+// You can ignore any need to sanitize words or add punctuation, but you should add spaces between each word.
+//  Be careful, there shouldn't be a space at the beginning or the end of the sentence!
+
+//Example
+//['hello', 'world', 'this', 'is', 'great']  =>  'hello world this is great'
+//ANSWER 
+function smash (words) {
+    return words.join(" ");
+ }
+ console.log(smash(["hello", "world", "is", "great"]));
+
+ 
+/*The cockroach is one of the fastest insects. 
+Write a function which takes its speed in km per hour and returns it in cm per second,
+ rounded down to the integer (= floored).
+
+For example:
+1.08 --> 30 */
+//ANSWER
+function cockroachSpeed(s){
+    return Math.floor(s * 27.7778);
+}
+console.log(cockroachSpeed(1.08));
