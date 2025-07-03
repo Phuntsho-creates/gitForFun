@@ -33,15 +33,14 @@ return result
 console.log(doubleChar('phuntsho wangmo'));
 
 
+
 function testEven(n) {
-  if(n%2 ===0){
+  if( n % 2 === 0){
     return true;
   }
   else{
      return false;
   }
-  
-    //Your awesome code here!
 }
 console.log(testEven(5));
 
@@ -148,6 +147,15 @@ function findDifference(a, b) {
   const cubiod2 = b[0]*b[1]*b[2];
   let result = Math.abs(cubiod1 -cubiod2);
   return result;
-  //loading...
 }
 console.log(findDifference([2,3,4],[4,5,6]))
+
+function arrayPlusArray(arr1, arr2) {
+  const arrayCombine = arr1.concat(arr2);
+  let sum = 0;
+  for(let i = 0; i < arrayCombine.length; i += 1){
+    sum += arrayCombine[i]
+  }
+  return sum; 
+}
+console.log(arrayPlusArray([1, 2, 3], [4, 5, 6]));
