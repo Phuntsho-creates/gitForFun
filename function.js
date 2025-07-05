@@ -203,3 +203,28 @@ function paperwork(n, m) {
     return n *m;
  }
  console.log(paperwork(5,5));
+
+function addBinary(a,b){
+  return (a+b).toString(2)
+}
+console.log(addBinary(5,6));
+
+function addBinary(a,b) {
+  let sum = a + b;
+  let result = sum.toString(2);
+  return result ;
+}
+console.log(addBinary(5,3));
+
+function accum(s) {
+	let result = ' ';// this will store the final string
+for(let i = 0; i < s.length; i += 1){
+  // Get the current character
+  result += s[i].toUpperCase() + s[i].toLowerCase().repeat(i);// Uppercase first, then lowercase repeated i times
+  if (i !== s.length -1){// Add dash after every part except the last
+    result +='-';
+  }
+}
+return result;
+}
+console.log(accum('hello world'));
