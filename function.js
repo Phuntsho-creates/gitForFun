@@ -268,3 +268,39 @@ function booleanToString(b){
 }
 console.log(booleanToString(true));
 console.log(booleanToString(false)); 
+
+function dnaStrand(dna){
+  let result = '';
+  for(let i = 0; i < dna.length; i += 1){
+    if(dna[i] ==='A') result += 'T';
+    else if (dna [i] === 'T') result += 'A';
+    else if(dna [i] === 'C') result += 'G';
+    else if (dna [i] === 'G') result += 'C';
+  }
+  return result;
+}
+function validatePIN (pin) {
+  if(pin.length !== 4 && pin.length !== 6)return false;
+  
+  for(let i = 0; i < pin.length ; i +=1){
+    if(pin[i] < '0' || pin[i] > '9')return false;
+  }
+  return true;
+    }
+console.log(validatePIN ("2345"));
+
+//Define a method hello that returns "Hello, Name!" to a given name, or says Hello, World! if name is not given (or passed as an empty String).
+//Assuming that name is a String and it checks for user typos to return a name with a first capital letter (Xxxx).
+
+function hello(name) {
+ if(!name || name ===''){
+   return "Hello, World!";
+ }
+  let firstLetter = name[0].toUpperCase();
+  let rest = name.slice(1).toLowerCase();
+  let fixedName = firstLetter + rest;
+  return 'Hello, ' + fixedName+ '!';
+}
+console.log(hello("john"));
+console.log(hello(""));         // "Hello, World!"
+console.log(hello());           // "Hello, World!"))
