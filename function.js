@@ -228,3 +228,65 @@ for(let i = 0; i < s.length; i += 1){
 return result;
 }
 console.log(accum('hello world'));
+
+// Create a function which answers the question "Are you playing banjo?".
+// If your name starts with the letter "R" or lower case "r", you are playing banjo!
+
+// The function takes a name as its only argument, and returns one of the following strings:
+
+// name + " plays banjo" 
+// name + " does not play banjo"
+// Names given are always valid strings.
+
+
+function areYouPlayingBanjo(name) {
+     if(name[0].toLowerCase() ==='r'){
+       return name + " plays banjo";
+     }
+  else{
+    return name+ " does not play banjo";
+  }
+}
+console.log(areYouPlayingBanjo('Rame'));
+console.log(areYouPlayingBanjo('jigme'));
+
+// Let's play! You have to return which player won! In case of a draw return Draw!.
+
+// Examples(Input1, Input2 --> Output):
+
+// "scissors", "paper" --> "Player 1 won!"
+// "scissors", "rock" --> "Player 2 won!"
+// "paper", "paper" --> "Draw!"
+
+const rps = (p1, p2) => {
+  const choice = ['rock','paper','scissors'];
+  const a = p1.toLowerCase();
+  const b = p2.toLowerCase();
+
+  if (!choice.includes(a) || !choice.includes(b)) {
+    throw new Error('Invalid input: use "rock", "paper", or "scissors".');
+  }
+
+  if (a === b) {
+    return 'Draw!';
+  }
+
+  const winsAgainst = {
+    rock: 'scissors',
+    scissors: 'paper',
+    paper: 'rock'
+  };
+
+  if (winsAgainst[a] === b) {
+    return 'Player 1 won!';
+  } else {
+    return 'Player 2 won!';
+  }
+};
+
+console.log(rps('scissors', 'rock'));
+
+function noSpace(x){
+return x.replace(/\s+/g, "");
+}
+console.log(noSpace('h e l l o j s ef'));
