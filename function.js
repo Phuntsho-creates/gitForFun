@@ -228,3 +228,36 @@ for(let i = 0; i < s.length; i += 1){
 return result;
 }
 console.log(accum('hello world'));
+
+function findNeedle(haystack) {
+  for(let i=0; i < haystack.length; i += 1){
+  if(haystack[i] ==="needle"){ 
+    return "found the needle at position " + i;
+}
+}
+  }
+  console.log(findNeedle(['jung','cool','needle','junk']));
+
+  function correct(string)
+{
+	let result= '';
+  for(let i = 0; i < string.length; i += 1){
+    if (string[i] === "5" ){
+      result = result + 'S';
+    }else if (string[i] === "0"){
+      result = result + 'O';
+    }else if (string[i] === "1"){
+      result = result + 'I';
+    }else{
+      result = result + string[i];
+    }
+    } 
+  return result;
+   }
+
+   console.log(correct('l0nd0n'));
+
+   function repeatStr (n, s) {
+  return s.repeat(n);
+}
+console.log(repeatStr (5,"t"));
