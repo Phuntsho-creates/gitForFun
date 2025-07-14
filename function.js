@@ -273,4 +273,141 @@ console.log(repeatStr (5,"t"));
 function otherAngle(a, b) {
   return 180 - (a+b);
 }
-console.log(otherAngle(60,60))
+console.log(otherAngle(60,60);
+
+// Create a function which answers the question "Are you playing banjo?".
+// If your name starts with the letter "R" or lower case "r", you are playing banjo!
+
+// The function takes a name as its only argument, and returns one of the following strings:
+
+// name + " plays banjo" 
+// name + " does not play banjo"
+// Names given are always valid strings.
+
+
+function areYouPlayingBanjo(name) {
+     if(name[0].toLowerCase() ==='r'){
+       return name + " plays banjo";
+     }
+  else{
+    return name+ " does not play banjo";
+  }
+}
+console.log(areYouPlayingBanjo('Rame'));
+console.log(areYouPlayingBanjo('jigme'));
+
+// Let's play! You have to return which player won! In case of a draw return Draw!.
+
+// Examples(Input1, Input2 --> Output):
+
+// "scissors", "paper" --> "Player 1 won!"
+// "scissors", "rock" --> "Player 2 won!"
+// "paper", "paper" --> "Draw!"
+
+const rps = (p1, p2) => {
+  const choice = ['rock','paper','scissors'];
+  const a = p1.toLowerCase();
+  const b = p2.toLowerCase();
+
+  if (!choice.includes(a) || !choice.includes(b)) {
+    throw new Error('Invalid input: use "rock", "paper", or "scissors".');
+  }
+
+  if (a === b) {
+    return 'Draw!';
+  }
+
+  const winsAgainst = {
+    rock: 'scissors',
+    scissors: 'paper',
+    paper: 'rock'
+  };
+
+  if (winsAgainst[a] === b) {
+    return 'Player 1 won!';
+  } else {
+    return 'Player 2 won!';
+  }
+};
+
+console.log(rps('scissors', 'rock'));
+
+function noSpace(x){
+return x.replace(/\s+/g, "");
+}
+console.log(noSpace('h e l l o j s ef'));
+/*Given a random non-negative number, you have to return the digits of this number within an array in reverse order.
+
+Example (Input => Output):
+35231 => [1,3,2,5,3]
+0     => [0]  */
+
+//How it works
+/*n.toString() → converts number to a string (e.g., 35231 → "35231")
+
+.split('') → splits string into array of characters → ["3", "5", "2", "3", "1"]
+
+.reverse() → reverses the array → ["1", "3", "2", "5", "3"]
+
+.map(Number) → converts each character to number → [1, 3, 2, 5, 3] */
+
+
+function digitize(n){
+  let result = n.toString().split('').reverse().map(Number);
+  return result;
+}
+console.log(digitize(765432));
+
+/*Create a function that accepts a parameter representing a name and returns the message: "Hello, <name> how are you doing today?".
+
+[Make sure you type the exact thing I wrote or the program may not execute properly]
+*/
+
+function greet(name){
+  return "Hello, " + name + " how are you doing?";
+}
+console.log(greet("Jigme"));
+
+//Implement a function which convert the given boolean value into its string representation.
+
+function booleanToString(b){
+  return b.toString();
+}
+console.log(booleanToString(true));
+console.log(booleanToString(false)); 
+
+function dnaStrand(dna){
+  let result = '';
+  for(let i = 0; i < dna.length; i += 1){
+    if(dna[i] ==='A') result += 'T';
+    else if (dna [i] === 'T') result += 'A';
+    else if(dna [i] === 'C') result += 'G';
+    else if (dna [i] === 'G') result += 'C';
+  }
+  return result;
+}
+function validatePIN (pin) {
+  if(pin.length !== 4 && pin.length !== 6)return false;
+  
+  for(let i = 0; i < pin.length ; i +=1){
+    if(pin[i] < '0' || pin[i] > '9')return false;
+  }
+  return true;
+    }
+console.log(validatePIN ("2345"));
+
+//Define a method hello that returns "Hello, Name!" to a given name, or says Hello, World! if name is not given (or passed as an empty String).
+//Assuming that name is a String and it checks for user typos to return a name with a first capital letter (Xxxx).
+
+function hello(name) {
+ if(!name || name ===''){
+   return "Hello, World!";
+ }
+  let firstLetter = name[0].toUpperCase();
+  let rest = name.slice(1).toLowerCase();
+  let fixedName = firstLetter + rest;
+  return 'Hello, ' + fixedName+ '!';
+}
+console.log(hello("john"));
+console.log(hello(""));         // "Hello, World!"
+console.log(hello());           // "Hello, World!"
