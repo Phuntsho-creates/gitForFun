@@ -229,6 +229,51 @@ return result;
 }
 console.log(accum('hello world'));
 
+function findNeedle(haystack) {
+  for(let i=0; i < haystack.length; i += 1){
+  if(haystack[i] ==="needle"){ 
+    return "found the needle at position " + i;
+}
+}
+  }
+  console.log(findNeedle(['jung','cool','needle','junk']));
+
+  function correct(string)
+{
+	let result= '';
+  for(let i = 0; i < string.length; i += 1){
+    if (string[i] === "5" ){
+      result = result + 'S';
+    }else if (string[i] === "0"){
+      result = result + 'O';
+    }else if (string[i] === "1"){
+      result = result + 'I';
+    }else{
+      result = result + string[i];
+    }
+    } 
+  return result;
+   }
+
+   console.log(correct('l0nd0n'));
+
+   function repeatStr (n, s) {
+  return s.repeat(n);
+}
+console.log(repeatStr (5,"t"));
+
+// You are given two interior angles (in degrees) of a triangle.
+
+// Write a function to return the 3rd.
+
+// Note: only positive integers will be tested.
+
+
+
+function otherAngle(a, b) {
+  return 180 - (a+b);
+}
+console.log(otherAngle(60,60);
 
 // Create a function which answers the question "Are you playing banjo?".
 // If your name starts with the letter "R" or lower case "r", you are playing banjo!
@@ -291,7 +336,6 @@ function noSpace(x){
 return x.replace(/\s+/g, "");
 }
 console.log(noSpace('h e l l o j s ef'));
-=======
 /*Given a random non-negative number, you have to return the digits of this number within an array in reverse order.
 
 Example (Input => Output):
@@ -366,5 +410,4 @@ function hello(name) {
 }
 console.log(hello("john"));
 console.log(hello(""));         // "Hello, World!"
-console.log(hello());           // "Hello, World!"))
-
+console.log(hello());           // "Hello, World!"
