@@ -466,3 +466,25 @@ function powersOfTwo(n){
   return result;
 }
 console.log(powersOfTwo(0));
+
+// Write a function to convert a name into initials. This kata strictly takes two words with one space in between them.
+
+// The output should be two capital letters with a dot separating them.
+
+// It should look like this:
+
+// Sam Harris => S.H
+
+// patrick feeney => P.F
+
+
+
+function abbrevName(name){
+  const names = name.split(" ");
+  const firstInitial = names[0][0].toUpperCase();
+  const secondInitial = names[1][0].toUpperCase();
+  return `${firstInitial}.${secondInitial}`;
+}
+console.log(abbrevName("phuntsho wangmo"));
+console.log(abbrevName("jigme yoezer gyeltsehn"));
+console.log(abbrevName("nima gyeltshen"));
