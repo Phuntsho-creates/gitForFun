@@ -480,11 +480,19 @@ console.log(powersOfTwo(0));
 
 
 function abbrevName(name){
-  const names = name.split(" ");
+  if(typeof name !== "string" || !name.includes(" ")){
+     return "Invalid input";
+  }
+  const names = name.trim().split(" ").filter(Boolean);
   const firstInitial = names[0][0].toUpperCase();
   const secondInitial = names[1][0].toUpperCase();
   return `${firstInitial}.${secondInitial}`;
 }
-console.log(abbrevName("phuntsho wangmo"));
+try {
+  console.log(abbrevName("phuntsho"));                 // ❌ Error
+} catch (err) {
+  console.log("Error:", err.message); // Output: Error: Please provide full name
+}
+console.log(abbrevName("phuntsho"));
 console.log(abbrevName("jigme yoezer gyeltsehn"));
 console.log(abbrevName("nima gyeltshen"));
